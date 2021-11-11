@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #main{
+            height: 100vh;
+            width: 100%;
+           
+
+            background-color: lightgray;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #container{
+            
+            display: flex;
+            width: 400px;
+            height: auto;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            padding: 10px;
+            border: 2px solid burlywood;
+           
+        }
+        #dsp{
+            height: 50px;
+            width: 250px;
+            background-color: deeppink;
+            opacity: 30%;
+            text-align: center;
+            font-weight: bolder;
+            font-size: x-large;
+            
+        }
+        .btn{
+            height: 25px;
+            width: 100px;
+            padding: 2px;
+            border-radius: 20%;
+            margin: 5px;
+            background-color: mediumslateblue;
+            font-size: medium;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id= "main">
+        <h1 style="color: crimson;text-shadow: 1px burlywood; position: relative;">UP/Down Counter</h1>
+        <div id="container">
+            <p id="dsp" type="text" disabled>0</p>
+            <input class="btn" type="button" onclick="add()" value="+ UP">
+            <input class="btn" type="button" onclick="reset()" value="0 Reset">
+            <input class="btn" type="button" onclick="sub()" value="- Down">
+        </div>
+    </div>
+    <script>
+        
+        function add (){
+            var a = document.getElementById("dsp").innerHTML;
+            var b=parseInt(a);
+            b=b+1;
+            
+            document.getElementById("dsp").innerHTML = b;
+        }
+        function reset (){
+           
+            
+            document.getElementById("dsp").innerHTML = 0;
+        }
+        function sub (){
+            var a = document.getElementById("dsp").innerHTML;
+            var b=parseInt(a);
+            b=b-1;
+            
+            document.getElementById("dsp").innerHTML = b;
+        }
+
+
+
+    </script>
+</body>
+</html>
